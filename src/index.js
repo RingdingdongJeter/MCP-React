@@ -4,7 +4,6 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import Home from './Page/Home';
 import MoreInfo from './Page/MoreInfo';
-import Login from './Page/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,7 +13,6 @@ function IndexApp() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/more-info" element={<MoreInfo />} />
-        <Route path="/log-in" element={<Login />} />
       </Routes>
     </Router>
   );
