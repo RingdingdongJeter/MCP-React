@@ -1,6 +1,6 @@
 // constants
 
-export const Webcode = `
+export const Webcode2 = `
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -150,7 +150,7 @@ export const Webcode = `
 
     <section class="hero-section container" id="about">
         <h2>以藝術重新定義美學</h2>
-        <p>結合法式時尚與東方美学的奢华造型體驗<br>使用高端護理產品與個性化服務方案</p>
+        <p>結合法式時尚與東方美學的奢華造型體驗<br>使用高端護理產品與個性化服務方案</p>
     </section>
 
     <section class="services section" id="services">
@@ -158,7 +158,7 @@ export const Webcode = `
             <h2>旗艦服務項目</h2>
             <div class="service-box">
                 <h3>奢華護髮疗程</h3>
-                <p>使用CHÉLAN专业線系列<br>3階段修護技術 (頭皮淨化/毛髮修復/滋潤養護)</p>
+                <p>使用CHÉLAN專業線系列<br>3階段修護技術 (頭皮淨化/毛髮修復/滋潤養護)</p>
             </div>
             <div class="service-box">
                 <h3>3D立體髮際塑造</h3>
@@ -208,74 +208,191 @@ export const Webcode = `
 </body>
 </html>`
 
-export const Webcode2 = `<!DOCTYPE html>
+export const Webcode = `<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>美麗預覽頁面</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI競賽形象網頁</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      height: 100vh;
-      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        header {
+            background: linear-gradient(45deg, #00bcd4, #ff4081);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .card {
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(12px);
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      padding: 2rem 3rem;
-      max-width: 400px;
-      text-align: center;
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
 
-    .card h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-    .card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-    .card button {
-      background-color: #ffffff;
-      color: #333;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
 
-    .card button:hover {
-      background-color: #f1f1f1;
-      transform: scale(1.05);
-    }
-  </style>
+        .container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .section {
+            margin: 50px 0;
+        }
+
+        h2 {
+            color: #00bcd4;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .competition-details, .leaderboard, .registration {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .leaderboard table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .leaderboard table, .leaderboard th, .leaderboard td {
+            border: 1px solid #00bcd4;
+        }
+
+        .leaderboard th, .leaderboard td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .registration form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .registration input, .registration button {
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #00bcd4;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .registration button {
+            background-color: #00bcd4;
+            color: white;
+            cursor: pointer;
+        }
+
+        .registration button:hover {
+            background-color: #ff4081;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <h1>My Portfolio</h1>
-    <p>Empowering brands through thoughtful and strategy-led marketing。<br>FULL POTENTIAL</p>
-    <button onclick="alert('你點了按鈕！')">Try It Now</button>
-  </div>
+    <header>
+        <h1>AI競賽 - 未來科技挑戰</h1>
+        <nav>
+            <a href="#details">競賽詳情</a>
+            <a href="#leaderboard">即時排行榜</a>
+            <a href="#registration">註冊參賽</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="details" class="section competition-details">
+            <h2>競賽詳情</h2>
+            <p>加入AI競賽，挑戰前沿科技，展示你的AI技術與創新。無論是個人開發者還是團隊，這是展現實力的最佳平台！</p>
+            <ul>
+                <li><strong>開始日期：</strong>2025年6月1日</li>
+                <li><strong>結束日期：</strong>2025年6月30日</li>
+                <li><strong>獎金：</strong>超過10萬元獎金池</li>
+                <li><strong>競賽項目：</strong>AI模型訓練、資料處理、AI解決方案設計</li>
+            </ul>
+        </section>
+
+        <section id="leaderboard" class="section leaderboard">
+            <h2>即時排行榜</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>隊伍名稱</th>
+                        <th>分數</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>AI神話</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>智勇雙全</td>
+                        <td>950</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>深度學習者</td>
+                        <td>900</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registration" class="section registration">
+            <h2>註冊參賽</h2>
+            <form>
+                <input type="text" placeholder="隊伍名稱" required>
+                <input type="email" placeholder="聯絡郵箱" required>
+                <input type="text" placeholder="簡短介紹" required>
+                <button type="submit">註冊參賽</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI競賽 | 所有權利保留</p>
+    </footer>
 </body>
 </html>`
 
@@ -438,17 +555,90 @@ export const BrandHTML = `<!DOCTYPE html>
 </body>
 </html>`
 
-export const project1 = {id:"1", title: 'Build Smooth Landing Pages', date: 'April 24, 2024',
+export const project1 = {id:"1", title: 'AI Contest Challenge', date: 'May 1, 2025',
   Webcode: Webcode, file1:"Main.html", file2:"Main.css", file3:"Preview.js",
-  history1:"Background color dark, plus border bottom", history2:"Add more margin, hover activate"}; 
+  history1:"2025/5/1 01:28, Add Competition Details", history2:"2025/5/1 02:20, New Leaderboard Information"}; 
 
-export const project2 = {id:"2", title: 'My Portfolio', date: 'April 23, 2024',
-  Webcode: Webcode2, file1:"Index.html", file2:"Index.css", file3:"Component.js"}; 
+export const project2 = {id:"2", title: 'Aesthetics & Luxury Beauty', date: 'May 2, 2025',
+  Webcode: Webcode2, file1:"Index.html", file2:"Index.css", file3:"Component.js",
+  history1:"2025/5/2 14:50, Background color dark", history2:"2025/5/2 16:34, Add more margin, hover activate"}; 
 
-export const project3 = {id:"3", title: 'Responsive Navbar Example', date: 'April 22, 2024',
-  Webcode: BrandHTML, file1:"Index.html", file2:"Index.css", file3:"Component.js"};
+export const project3 = {id:"3", title: 'Responsive Tech Innovation', date: 'April 22, 2024',
+  Webcode: BrandHTML, file1:"Index.html", file2:"Index.css", file3:"Component.js",
+  history1:"2024/4/22 14:50, Change Light Buttom Color"};
 
-export const project4 = {id:"4", title: 'New Design', date: '',
+export const project4 = {id:"4", title: 'New Design', date: 'May 3, 2025',
   Webcode: '', file1:"Index.html", file2:"Index.css", file3:"Component.js"}; 
 
 export const All_Projects = [project1, project2, project3]
+
+/*`<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>美麗預覽頁面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      padding: 2rem 3rem;
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .card button {
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>My Portfolio</h1>
+    <p>Empowering brands through thoughtful and strategy-led marketing。<br>FULL POTENTIAL</p>
+    <button onclick="alert('你點了按鈕！')">Try It Now</button>
+  </div>
+</body>
+</html>`*/

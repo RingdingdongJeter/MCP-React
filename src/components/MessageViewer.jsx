@@ -20,7 +20,7 @@ export function MessageViewer() {
             }
 
             try {
-                const res = await fetch(`http://172.18.0.2:8001/⁠api/sessions/${sessionId}/messages`, {
+                const res = await fetch(`http://140.113.73.25:8001/api/sessions/${sessionId}/messages`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -34,7 +34,6 @@ export function MessageViewer() {
                 setMessages(json);
             } catch (err) {
                 setError(err.message);
-                alert(err.message);
             }
         };
 

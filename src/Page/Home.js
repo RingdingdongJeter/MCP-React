@@ -77,6 +77,22 @@ function Main_Sight({ incomingProject }){
         project['Webcode'] = htmlCode;
         handleGenerate(htmlCode);   // 產生網頁回應
 
+        // 增加歷史紀錄
+        const now = new Date();
+        const taiwanTime = now.toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
+        const nextIndex = Object.keys(project).filter(k => k.startsWith('history')).length + 1;
+        const newKey = `history${nextIndex}`;
+        //project[newKey] = `第 ${nextIndex} 筆新的歷史紀錄`;
+        project[newKey] = `${taiwanTime}, ${content}`
+      
+        // 重新拉 histories
+        const updatedHistories = Object.entries(project)
+          .filter(([key, _]) => key.startsWith("history"))
+          .map(([_, value]) => value);
+      
+        setHistories(updatedHistories);
+        setSelectedIndex(updatedHistories.length - 1);
+
       } catch (err) {
         console.error('❌ 發生錯誤：', err);
         setMessages((prev) => {
@@ -85,19 +101,6 @@ function Main_Sight({ incomingProject }){
           return newMessages;
         });
       }
-  
-      // 增加歷史紀錄
-      const nextIndex = Object.keys(project).filter(k => k.startsWith('history')).length + 1;
-      const newKey = `history${nextIndex}`;
-      project[newKey] = `第 ${nextIndex} 筆新的歷史紀錄`;
-    
-      // 重新拉 histories
-      const updatedHistories = Object.entries(project)
-        .filter(([key, _]) => key.startsWith("history"))
-        .map(([_, value]) => value);
-    
-      setHistories(updatedHistories);
-      setSelectedIndex(updatedHistories.length - 1);
     };
   
     // 滑到最底
@@ -248,7 +251,7 @@ function Main_Sight({ incomingProject }){
         </Modal.Header>
 
         <Modal.Body>
-          <p>確定要儲存目前的程式碼嗎？儲存後將無法還原喔！</p>
+          <p>確定要儲存目前的程式碼嗎？</p>
         </Modal.Body>
 
         <Modal.Footer>

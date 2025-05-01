@@ -22,7 +22,7 @@ export function AgentPrompt() {
         }
 
         try {
-            const res = await fetch(`http://172.18.0.2:8001/api/sessions/${sessionId}/agent`, {
+            const res = await fetch(`http://140.113.73.25:8001/api/sessions/${sessionId}/agent`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

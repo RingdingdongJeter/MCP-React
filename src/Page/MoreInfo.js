@@ -58,7 +58,7 @@ function Main_Sight(){
                         <h4 className="text-white mx-auto m-0">預覽畫面</h4>
                         <button className="btn btn-secondary rounded-5">
                           <i className="bi bi-download me-2"></i>
-                          預覽
+                          下載
                         </button>
                       </div>
                         <div class="row h-100">
@@ -125,7 +125,7 @@ function ProjectCard({ project, onClick }) {
                 <Button variant="outline-primary" size="sm" onClick={handleGoHome}>開啟 AI 編輯</Button>
               </OverlayTrigger>
   
-              <Button variant="outline-secondary" size="sm" onClick={() => setShowModal(true)}>下載程式碼</Button>
+              <Button variant="outline-secondary" size="sm" onClick={() => setShowModal(true)}>預覽程式碼</Button>
   
               {/* Tooltip 實例 */}
               <OverlayTrigger placement="top" overlay={<Tooltip>刪除此項目</Tooltip>}>
@@ -136,13 +136,34 @@ function ProjectCard({ project, onClick }) {
         </div>
   
         {/* Modal 彈窗 */}
-        <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+        <Modal 
+          show={showModal} 
+          onHide={() => setShowModal(false)} 
+          centered 
+          size="xl"            // ← 這裡！直接用 Bootstrap 的超大 Modal
+          dialogClassName="modal-90w" // ← 再稍微自訂一下讓寬度更大
+          style={{ maxHeight: "90vh" }} // ← 防止超出螢幕高度
+        >
           <Modal.Header closeButton>
             <Modal.Title>Preview - {project.title}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <p>這裡是預覽內容，你可以在這裡嵌入 iframe、HTML、圖表或更多資訊。</p>
+  
+          <Modal.Body style={{ overflowY: "auto", maxHeight: "70vh" }}>
+            {/* 放程式碼區塊 */}
+            <pre style={{
+              backgroundColor: "#1e1e1e",
+              color: "#d4d4d4",
+              padding: "1rem",
+              borderRadius: "8px",
+              overflowX: "auto",
+              whiteSpace: "pre-wrap", // ← 保留換行、也能自動換行
+              wordBreak: "break-word",
+              fontSize: "0.9rem",
+            }}>
+              {project.Webcode}
+            </pre>
           </Modal.Body>
+  
           <Modal.Footer>
             <Button variant="secondary" onClick={() => setShowModal(false)}>
               關閉
